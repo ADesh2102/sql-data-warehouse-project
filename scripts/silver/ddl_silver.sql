@@ -1,4 +1,12 @@
-
++-------------------------------------------------------------------------------------------+
+| This script drops existing tables (if any) and creates new Silver Layer tables            |
+| for the data warehouse. These tables contain cleaned, standardized, and enriched          |
+| data derived from raw CRM and ERP Bronze Layer sources.                                   |
+|                                                                                           |
+| The Silver Layer ensures data quality by applying business logic, handling nulls,         |
+| removing duplicates, and formatting fields. These curated tables serve as the trusted     |
+| intermediate source for analytics, dashboards, and further processing into the Gold Layer.|
++-------------------------------------------------------------------------------------------+
 DROP TABLE IF EXISTS silver.crm_cust_info;
 DROP TABLE IF EXISTS silver.crm_prd_info;
 DROP TABLE IF EXISTS silver.crm_sales_details;
